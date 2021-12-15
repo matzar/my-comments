@@ -1,0 +1,1 @@
+import{p as e,b as s}from"./p-9ec43e93.js";(()=>{const s=import.meta.url,m={};return""!==s&&(m.resourcesUrl=new URL(".",s).href),e(m)})().then((e=>s([["p-08f4be52",[[1,"my-comments",{supabseUrl:[1,"supabse-url"],supabaseKey:[1,"supabase-key"],comments:[32],newCommentValue:[32]}]]]],e)));

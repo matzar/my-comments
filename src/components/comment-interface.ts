@@ -1,4 +1,4 @@
-type MyComment = {
+export type MyComment = {
   /**
    * The id  of the author who wrote the comment
    */

@@ -6,56 +6,48 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface MyComments {
         /**
-          * The first name
+          * Public access token to the Supabased backend.
          */
-        "first": string;
+        "supabaseKey": string;
         /**
-          * The last name
+          * Public URL to the Supabase backend.
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "supabseUrl": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMyCommentsElement extends Components.MyComments, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMyCommentsElement: {
+        prototype: HTMLMyCommentsElement;
+        new (): HTMLMyCommentsElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "my-comments": HTMLMyCommentsElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface MyComments {
         /**
-          * The first name
+          * Public access token to the Supabased backend.
          */
-        "first"?: string;
+        "supabaseKey"?: string;
         /**
-          * The last name
+          * Public URL to the Supabase backend.
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "supabseUrl"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "my-comments": MyComments;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-comments": LocalJSX.MyComments & JSXBase.HTMLAttributes<HTMLMyCommentsElement>;
         }
     }
 }

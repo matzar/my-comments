@@ -39,6 +39,16 @@ export class MyComments implements ComponentInterface {
    */
   private supabase: SupabaseClient;
 
+  // TODO rename to getValue
+  private handleChange(ev: Event) {
+    const target = ev.currentTarget as HTMLInputElement;
+    this.newCommentValue = target.value;
+  }
+
+  private handleSubmit(ev: Event) {}
+
+  private;
+
   private renderComment(comment: MyComment) {
     return (
       <article role="comment">

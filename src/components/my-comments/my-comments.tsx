@@ -1,5 +1,6 @@
 import { Component, Host, h, Element, ComponentInterface, Prop, State } from '@stencil/core';
 import { MyComment } from '../comment-interface';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 @Component({
   tag: 'my-comments',
@@ -38,6 +39,10 @@ export class MyComments implements ComponentInterface {
    * We will import this type when we install Supabase.
    */
   private supabase: SupabaseClient;
+
+  componentWillLoad(): void | Promise<void> {
+    this.supabase = createClient(this.supabseUrl, this.supabaseKey);
+  }
 
   // TODO rename to getValue
   private handleChange(ev: Event) {

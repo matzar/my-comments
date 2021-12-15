@@ -71,7 +71,7 @@ export class MyComments implements ComponentInterface {
   }
 
   private async addComment() {
-    const { data, error } = await this.supabase.from('comments').insert([
+    const { data } = await this.supabase.from('comments').insert([
       {
         conntet: this.newCommentValue,
         author: 'Author Name', // Dummy value. (To be implemented when auth in added.)
